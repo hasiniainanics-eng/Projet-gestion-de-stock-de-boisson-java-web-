@@ -6,6 +6,7 @@
 	    <meta charset="UTF-8">
 	    <title>Gestionnaire de Boisson Pro</title>
 	    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/assets/css/style.css">
+	    <link rel="icon" href="${pageContext.request.contextPath}/views/assets/images/favicon/favicon.png" type="image/x-icon">
 	    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/assets/css/<%= request.getAttribute("style") %>">
 	</head>
 	<body onload="<%= request.getAttribute("jsFunction") %>">
