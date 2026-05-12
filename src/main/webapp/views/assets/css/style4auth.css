@@ -1,0 +1,56 @@
+/* ... (Garder la base du CSS précédent pour la planète et le fond sombre) ... */
+:root {
+	--danger: #ff4d4d;
+	--warning: #ffa500;
+	--success: #2ecc71;
+	--glass: rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: var(--glass);
+	backdrop-filter: blur(10px);
+	padding: 40px;
+	border-radius: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	width: 300px;
+	text-align: center;
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	background: rgba(0, 0, 0, 0.3);
+	border: 1px solid #444;
+	color: white;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+.btn-primary {
+	width: 100%;
+	padding: 12px;
+	background: #8a2be2;
+	border: none;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+form div {
+	margin-top: 20px;
+	transform: translateY(15px);
+}
+
+a {
+	color: #8a2be2;
+}
+
+a:visited {
+	color: #8a2be2;
+}

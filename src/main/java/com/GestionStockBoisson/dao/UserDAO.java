@@ -30,7 +30,7 @@ public class UserDAO {
 	}
 
 	// ajout de nouvel ustilisateur
-	public boolean sign_up(String nom, String email, String mdp) {
+	public int sign_up(String nom, String email, String mdp) {
 		if (check_email(email)) {			
 			String sql = "INSERT INTO users (nom, mdp, email) VALUES (?, ?, ?)";
 			try (Connection con = DBConnection.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {	
@@ -42,13 +42,13 @@ public class UserDAO {
 				int rowAffected = ps.executeUpdate();
 				if (rowAffected > 0) {
 					con.close();
-					return true;
+					return rowAffected;
 				} else { con.close(); }
 			} catch (Exception e) {
 				System.out.println("Exception: " + e);
 			}
 		}
-		return false;
+		return 0;
 	}
 
 	// vérifier si l'adresse email est déjà utilisée sinon insertion
