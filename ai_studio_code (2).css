@@ -1,0 +1,154 @@
+:root {
+    --bg-dark: #0c0c0c;
+    --sidebar-purple: #2b124c;
+    --active-orange: #f39c12;
+    --text-white: #ffffff;
+    --text-gray: #b3b3b3;
+    --border-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: var(--sidebar-purple);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.nav-links li a {
+    color: var(--text-white);
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+}
+
+.nav-links li.active {
+    background-color: var(--active-orange);
+}
+
+.logout {
+    margin-top: auto;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.notification-bell {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Table */
+.table-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: linear-gradient(to right, #1a3a5a, #0c0c0c);
+    padding: 15px;
+    text-align: left;
+    color: var(--text-gray);
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.alert-rupture { color: #f39c12; font-weight: bold; }
+.alert-expiration { color: #e74c3c; font-weight: bold; }
+
+/* Actions */
+.btn-plus {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-vendre {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}

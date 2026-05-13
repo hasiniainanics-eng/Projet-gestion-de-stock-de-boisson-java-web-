@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Stock de Boisson</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo-section">
+                <i class="fas fa-wine-glass-alt logo-icon"></i>
+                <h2>Gestion de stock de boisson</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#"><i class="fas fa-chart-line"></i> Statistiques</a></li>
+                <li class="active"><a href="#"><i class="fas fa-box"></i> Produits</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Paramètres</a></li>
+                <li><a href="#"><i class="fas fa-question-circle"></i> Aide</a></li>
+                <li class="logout"><a href="#"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>Produits</h1>
+                <div class="header-icons">
+                    <i class="fas fa-search"></i>
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span id="notif-count" class="badge">0</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nom</th>
+                            <th>PU(Ar)</th>
+                            <th>Quantité</th>
+                            <th>Date d'ajout</th>
+                            <th>Alertes</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-table-body">
+                        <!-- Les lignes seront générées par JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
