@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Stock - Produits</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barre latérale -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-wine-glass-alt"></i>
+                <h2>Gestion de stock de boisson</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><i class="fas fa-chart-line"></i> Statistiques</li>
+                    <li class="active"><i class="fas fa-box"></i> Produits</li>
+                    <li><i class="fas fa-cog"></i> Paramètres</li>
+                    <li><i class="fas fa-question-circle"></i> Aide</li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <i class="fas fa-sign-out-alt"></i> Déconnexion
+            </div>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="main-content">
+            <header>
+                <h1>Produits</h1>
+                <div class="header-icons">
+                    <i class="fas fa-search"></i>
+                    <i class="far fa-bell"></i>
+                </div>
+            </header>
+
+            <!-- Tableau des produits -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="radius-left">ID</th>
+                            <th>Nom</th>
+                            <th>PU(Ar)</th>
+                            <th>Quantité</th>
+                            <th>Date d'ajout</th>
+                            <th>Alertes</th>
+                            <th class="radius-right">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Ligne normale -->
+                        <tr>
+                            <td>1</td>
+                            <td>Bière</td>
+                            <td>2 500</td>
+                            <td>20</td>
+                            <td>2024-05-01</td>
+                            <td>-</td>
+                            <td class="actions">
+                                <i class="far fa-plus-square"></i>
+                                <button class="btn-vendre">vendre</button>
+                            </td>
+                        </tr>
+                        <!-- Ligne avec Alerte Rupture -->
+                        <tr>
+                            <td>4</td>
+                            <td>Bière</td>
+                            <td>2 500</td>
+                            <td>5</td>
+                            <td>2024-05-01</td>
+                            <td><span class="alert-rupture">rupture</span></td>
+                            <td class="actions">
+                                <i class="far fa-plus-square"></i>
+                                <button class="btn-vendre">vendre</button>
+                            </td>
+                        </tr>
+                        <!-- Ligne avec Alerte Expiration -->
+                        <tr>
+                            <td>7</td>
+                            <td>Bière</td>
+                            <td>2 500</td>
+                            <td>20</td>
+                            <td>2024-05-01</td>
+                            <td><span class="alert-expiration">expiration</span></td>
+                            <td class="actions">
+                                <i class="far fa-plus-square"></i>
+                                <button class="btn-vendre">vendre</button>
+                            </td>
+                        </tr>
+                        <!-- Ajoutez d'autres lignes ici pour remplir le tableau -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
